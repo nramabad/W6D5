@@ -136,9 +136,25 @@ function (_React$Component) {
   }
 
   _createClass(Clock, [{
+    key: "addZero",
+    value: function addZero(i) {
+      if (i < 10) {
+        i = "0" + i;
+      }
+
+      return i;
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Clock"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, this.state.time.toTimeString()));
+      var hours = this.addZero(this.state.time.getHours());
+      var minutes = this.addZero(this.state.time.getMinutes());
+      var seconds = this.addZero(this.state.time.getSeconds());
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "clock"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Clock"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "clock-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Date"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.state.time.toLocaleDateString("en-US"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Time"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, hours, ":", minutes, ":", seconds))));
     }
   }, {
     key: "tick",

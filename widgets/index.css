@@ -1,0 +1,31 @@
+body {
+  font-family: 'Unlock', cursive;
+  background-image: url('./spongebob.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.clock {
+  margin: 0 auto;
+  width: 30%;
+}
+
+.clock-body {
+  background-color: orange;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.clock-body div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.clock-body p {
+  color: white;
+  font-size: 24px;
+}
