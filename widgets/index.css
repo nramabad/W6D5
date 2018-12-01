@@ -29,3 +29,19 @@ body {
   color: white;
   font-size: 24px;
 }
+
+.tabs {
+  margin: 0 auto;
+  width: 30%;
+  background-color: green;
+  border: 2px solid black;
+  margin-top: 20px;
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: space-between; */
+  border-radius: 10px;
+}
+
+.tabs ul {
+  list-style-type: none;
+}
